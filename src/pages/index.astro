@@ -1,5 +1,6 @@
 ---
-
+const profileImg =
+	"https://nuxt-tailwindcss-portfolio-igcb.vercel.app/_nuxt/img/test2.7ba7f17.png";
 ---
 
 <html lang="en">
@@ -11,6 +12,40 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<div class="profile">
+			<img
+				src={profileImg}
+				class="profile__picture"
+				alt="Frau Katerina's headshot."
+				width="100px"
+				height="100px"
+			/>
+			<div class="profile__details">
+				<h1>Frau Katerina</h1>
+				<h2>VP of Engineering at Goooogle</h2>
+				<p>
+					Helping developers be excellent and succeed at building
+					scalable products
+				</p>
+			</div>
+		</div>
 	</body>
 </html>
+<style>
+	.profile {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	padding: 1rem 0 3rem 0;
+	}
+	.profile__details {
+	flex: 1 0 300px;
+	}
+	.profile__details > h1 {
+	margin-top: 0;
+	}
+	.profile__picture {
+	border-radius: 50%;
+	margin: 0 2rem 1rem 0;
+	}
+</style>
