@@ -1,17 +1,11 @@
 ---
+
+import Main from "../layouts/mainLayout.astro";
 const profileImg =
 	"https://nuxt-tailwindcss-portfolio-igcb.vercel.app/_nuxt/img/test2.7ba7f17.png";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
+<Main>
 		<div class="profile">
 			<img
 				src={profileImg}
@@ -29,9 +23,9 @@ const profileImg =
 				</p>
 			</div>
 		</div>
-	</body>
-</html>
-<style>
+
+	</Main>
+<style is:global>
 	.profile {
 	display: flex;
 	align-items: flex-start;
